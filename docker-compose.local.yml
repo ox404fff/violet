@@ -3,3 +3,6 @@ version: "3.4"
 services:
   nginx:
   node:
+    command: npm run serve
+    ports:
+      - "8080:8080"
