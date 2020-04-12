@@ -3,18 +3,13 @@
         <div class="row">
             <div class="position-absolute h-100 w-100 avatar-md bg d-none d-md-block"></div>
             <div class="position-absolute h-100 w-100 avatar-sm bg d-sm-block d-md-none"></div>
-            <div class="nav h-100 d-none d-lg-block"></div>
-            <b-container fluid class="h-100">
-                <b-row align-v="start" class="links">
-                    <b-col/>
-                    <b-col cols="2" class="p-5">
-                        About
-                    </b-col>
-                    <b-col cols="2" class="p-5 e-mali">
-                        julia@violet.run
-                    </b-col>
-                    <b-col cols="1" class="p-5 e-mali">
-                        )
+            <div class="nav h-100 d-none d-md-block"></div>
+            <b-container>
+                <b-row align-v="start">
+                    <b-col class="p-4 p-md-5 links" align="right">
+                        <span>Ballet</span>
+                        <span>About</span>
+                        <span class="e-mail">julia@violet.run</span>
                     </b-col>
                 </b-row>
                 <b-row class="center" align-v="center">
@@ -95,14 +90,19 @@ export default {
         background-position: right bottom;
         background-image: url("./assets/avatar-small.jpg");
         background-repeat: no-repeat;
-        min-height: 900px;
+        background-size: 400px 400px;
+        min-height: 850px;
     }
 
     .links {
         text-decoration: underline;
     }
 
-    .e-mali {
+    .links span {
+        padding: 0 15px;
+    }
+
+    .e-mail {
         color: #e9d842;
     }
 </style>
