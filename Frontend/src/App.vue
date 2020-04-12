@@ -1,46 +1,35 @@
 <template>
-  <div id="app">
-    <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand href="#">NavBar</b-navbar-brand>
+    <div class="h-100 min-vw-100">
+        <div class="position-absolute h-100 w-100 avatar-md d-none d-md-block"></div>
+        <div class="position-absolute h-100 w-100 avatar-sm d-md-none d-sm-block"></div>
+        <div class="nav h-100 d-none d-md-block"></div>
+        <b-container fluid id="app" class="h-100">
+            <b-row align-v="start" class="links">
+                <b-col/>
+                <b-col cols="2" align="right" class="p-5">
+                    Balet
+                </b-col>
+                <b-col cols="2" align="right" class="p-5">
+                    About
+                </b-col>
+                <b-col cols="2" align="right" class="p-5 e-mali">
+                    julia@violet.run
+                </b-col>
+            </b-row>
+            <b-row class="center" align-v="center">
+                <b-col cols="12" md="8">
+                    <h1 align="center">Основной текст</h1>
+                    <h2 align="center">Какое - то описание</h2>
+                    <h3 align="center">еще меньше буквы</h3>
+                    <h4 align="center">еще меньше буквы</h4>
+                    <h5 align="center">еще меньше буквы</h5>
+                </b-col>
+                <b-col cols="12" md="4">
 
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-      <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav>
-          <b-nav-item href="#">Link</b-nav-item>
-          <b-nav-item href="#" disabled>Disabled</b-nav-item>
-        </b-navbar-nav>
-
-        <!-- Right aligned nav items -->
-        <b-navbar-nav class="ml-auto">
-          <b-nav-form>
-            <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>
-            <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
-          </b-nav-form>
-
-          <b-nav-item-dropdown text="Lang" right>
-            <b-dropdown-item href="#">EN</b-dropdown-item>
-            <b-dropdown-item href="#">ES</b-dropdown-item>
-            <b-dropdown-item href="#">RU</b-dropdown-item>
-            <b-dropdown-item href="#">FA</b-dropdown-item>
-          </b-nav-item-dropdown>
-
-          <b-nav-item-dropdown right>
-            <!-- Using 'button-content' slot -->
-            <template v-slot:button-content>
-              <em>User</em>
-            </template>
-            <b-dropdown-item href="#">Profile</b-dropdown-item>
-            <b-dropdown-item href="#">Sign Out</b-dropdown-item>
-          </b-nav-item-dropdown>
-        </b-navbar-nav>
-      </b-collapse>
-    </b-navbar>
-    <div id="content">
-      <img alt="Vue logo" src="./assets/logo.png">
-      <MainPage msg="Is coming soon..."/>
+                </b-col>
+            </b-row>
+        </b-container>
     </div>
-  </div>
 </template>
 
 <script>
@@ -49,26 +38,60 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-import MainPage from './components/MainPage.vue'
+// import NavBar from './components/NavBar.vue'
 
-Vue.use(BootstrapVue)
-Vue.use(IconsPlugin)
+Vue.use(BootstrapVue);
+Vue.use(IconsPlugin);
 
 export default {
   name: 'App',
   components: {
-    MainPage
+    // NavBar
   }
 }
 </script>
 
 <style>
-#content {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+      min-width: 478px;
+  }
+  html, body {
+      height: 100%;
+  }
+
+  body {
+    background-color: #000000;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: left;
+  }
+
+  .center {
+    height: 600px;
+  }
+
+  .nav {
+      position: absolute;
+      width: 80px;
+      background-color: #242424;
+  }
+
+  .avatar-md {
+    background-position: right bottom;
+    background-image: url("./assets/avatar.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .avatar-sm {
+      background-position: center bottom;
+      background-image: url("./assets/avatar-small.jpg");
+      background-repeat: no-repeat;
+  }
+
+    .e-mali {
+        color: #e9d842;
+    }
 </style>
