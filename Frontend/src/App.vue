@@ -3,22 +3,36 @@
         <div class="row">
             <div class="position-absolute h-100 w-100 avatar-md bg d-none d-md-block"></div>
             <div class="position-absolute h-100 w-100 avatar-sm bg d-sm-block d-md-none"></div>
-            <div class="nav h-100 d-none d-md-block"></div>
+
+            <div class="nav h-100 d-none d-md-block">
+
+            </div>
+            <div class="nav-sm d-sm-block d-md-none d-lg-none">
+                <b-icon-list class="nav-menu"/>
+            </div>
             <b-container>
                 <b-row align-v="start">
-                    <b-col class="p-4 p-md-5 links" align="right">
-                        <span>Ballet</span>
-                        <span>About</span>
-                        <span class="e-mail">julia@violet.run</span>
+                    <b-col cols="12" class="links" align="right">
+                        <div style="padding: 10px">
+                            <span>Ballet</span>
+                            <span>About</span>
+                            <span class="e-mail">julia@violet.run</span>
+                        </div>
                     </b-col>
                 </b-row>
                 <b-row class="center" align-v="center">
                     <b-col cols="12" md="8">
-                        <h1 align="center">Основной текст</h1>
-                        <h2 align="center">Какое - то описание</h2>
-                        <h3 align="center">еще меньше буквы</h3>
-                        <h4 align="center">еще меньше буквы</h4>
-                        <h5 align="center">еще меньше буквы</h5>
+                        <h1 align="center">Кабатова Юлия</h1>
+                        <h2 align="center">Самая прекрастная</h2>
+                        <h3 align="center">Суперзвезда и супермодель</h3>
+                        <h4 align="center">Мирового уровня</h4>
+                        <h4 align="center">
+                            <b-icon-star-fill/>
+                            <b-icon-star-fill/>
+                            <b-icon-star-fill/>
+                            <b-icon-star-fill/>
+                            <b-icon-star-fill/>
+                        </h4>
                     </b-col>
                     <b-col cols="12" md="4">
 
@@ -77,6 +91,18 @@ export default {
         width: 80px;
         background-color: #242424;
         min-height: 800px;
+    }
+
+    .nav-sm {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+    }
+
+    .nav-menu {
+        width: 40px;
+        height: 40px;
     }
 
     .avatar-md {
