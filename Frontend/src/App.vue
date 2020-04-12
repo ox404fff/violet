@@ -88,7 +88,7 @@ export default {
 
     .avatar-sm {
         background-position: right bottom;
-        background-image: url("./assets/avatar-small.jpg");
+        background-image: url("./assets/avatar-retina.jpg");
         background-repeat: no-repeat;
         background-size: 400px 400px;
         min-height: 850px;
