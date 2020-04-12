@@ -6,14 +6,17 @@
         <b-container fluid id="app" class="h-100">
             <b-row align-v="start" class="links">
                 <b-col/>
-                <b-col cols="2" align="right" class="p-5">
+                <b-col cols="2" class="p-5">
                     Balet
                 </b-col>
-                <b-col cols="2" align="right" class="p-5">
+                <b-col cols="2" class="p-5">
                     About
                 </b-col>
-                <b-col cols="2" align="right" class="p-5 e-mali">
+                <b-col cols="2" class="p-5 e-mali">
                     julia@violet.run
+                </b-col>
+                <b-col cols="1" class="p-5 e-mali">
+                    )
                 </b-col>
             </b-row>
             <b-row class="center" align-v="center">
@@ -52,44 +55,49 @@ export default {
 </script>
 
 <style>
-  #app {
-      min-width: 478px;
-  }
-  html, body {
-      height: 100%;
-  }
+    #app {
+        min-width: 478px;
+    }
 
-  body {
-    background-color: #000000;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.5);
-    text-align: left;
-  }
+    html, body {
+        height: 100%;
+    }
 
-  .center {
-    height: 600px;
-  }
+    body {
+        background-color: #000000;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.5);
+        text-align: left;
+    }
 
-  .nav {
-      position: absolute;
-      width: 80px;
-      background-color: #242424;
-  }
+    .center {
+        height: 600px;
+    }
 
-  .avatar-md {
-    background-position: right bottom;
-    background-image: url("./assets/avatar.jpg");
-    background-repeat: no-repeat;
-  }
+    .nav {
+        position: absolute;
+        width: 80px;
+        background-color: #242424;
+    }
 
-  .avatar-sm {
-      background-position: center bottom;
-      background-image: url("./assets/avatar-small.jpg");
-      background-repeat: no-repeat;
-  }
+    .avatar-md {
+        background-position: right bottom;
+        background-image: url("./assets/avatar.jpg");
+        background-repeat: no-repeat;
+    }
+
+    .avatar-sm {
+        background-position: center bottom;
+        background-image: url("./assets/avatar-small.jpg");
+        background-repeat: no-repeat;
+    }
+
+    .links {
+        text-decoration: underline;
+    }
 
     .e-mali {
         color: #e9d842;
