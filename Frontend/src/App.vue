@@ -5,10 +5,14 @@
             <div class="position-absolute h-100 w-100 avatar-sm bg d-sm-block d-md-none"></div>
 
             <div class="nav h-100 d-none d-md-block">
-
+                <div class="social">
+                    <a href="https://www.instagram.com/"><img src="./assets/instagram.svg" alt="Instagram"/></a>
+                    <a href="https://www.facebook.com/"><img src="./assets/fb.svg" alt="Facebook"/></a>
+                    <a href="https://vk.com/"><img src="./assets/vk.svg" alt="Vkontakte"/></a>
+                </div>
             </div>
             <div class="nav-sm d-sm-block d-md-none d-lg-none">
-                <b-icon-list class="nav-menu"/>
+                <b-icon-list class="nav-menu" @click="menuToggle"/>
             </div>
             <b-container>
                 <b-row align-v="start">
@@ -21,7 +25,7 @@
                     </b-col>
                 </b-row>
                 <b-row class="center" align-v="center">
-                    <b-col cols="12" md="8">
+                    <b-col class="col-md-8">
                         <h1 align="center">Кабатова Юлия</h1>
                         <h2 align="center">Самая прекрастная</h2>
                         <h3 align="center">Суперзвезда и супермодель</h3>
@@ -34,11 +38,11 @@
                             <b-icon-star-fill/>
                         </h4>
                     </b-col>
-                    <b-col cols="12" md="4">
-
-                    </b-col>
                 </b-row>
             </b-container>
+            <div class="menu h-100 w-75" v-if="menu.opened">
+                <b-icon-list class="nav-menu" @click="menuToggle"/>
+            </div>
         </div>
     </b-container>
 </template>
@@ -55,10 +59,22 @@ Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 
 export default {
-  name: 'App',
-  components: {
-    // NavBar
-  }
+    name: 'App',
+    data() {
+        return {
+            menu: {
+                opened: false
+            }
+        }
+    },
+    components: {
+        // NavBar
+    },
+    methods: {
+        menuToggle() {
+            this.menu.opened = !this.menu.opened;
+        }
+    }
 }
 </script>
 
@@ -77,8 +93,7 @@ export default {
         font-size: 1rem;
         font-weight: 400;
         line-height: 1.5;
-        /*color: rgba(255, 255, 255, 0.5);*/
-        color: white;
+        color: #b4a18a;
         text-align: left;
     }
 
@@ -93,16 +108,31 @@ export default {
         min-height: 800px;
     }
 
+    .nav img {
+        margin: 0 15px 15px 15px;
+    }
+
+    .nav .social {
+        height: 200px;
+        bottom: 0;
+        position: absolute;
+    }
     .nav-sm {
         position: absolute;
         width: 60px;
         height: 60px;
-        padding: 10px;
+    }
+
+    .menu {
+        position: absolute;
+        background-color: grey;
+        opacity: 50%;
     }
 
     .nav-menu {
         width: 40px;
         height: 40px;
+        margin: 10px;
     }
 
     .avatar-md {
