@@ -25,18 +25,16 @@
                     </b-col>
                 </b-row>
                 <b-row class="center" align-v="center">
-                    <b-col class="col-md-8">
+                    <b-col class="col-md-1 d-none d-md-block" style="background-color: red"/>
+                    <b-col class="col-md-7">
                         <h1 align="center">Кабатова Юлия</h1>
-                        <h2 align="center">Самая прекрастная</h2>
-                        <h3 align="center">Суперзвезда и супермодель</h3>
-                        <h4 align="center">Мирового уровня</h4>
-                        <h4 align="center">
-                            <b-icon-star-fill/>
-                            <b-icon-star-fill/>
-                            <b-icon-star-fill/>
-                            <b-icon-star-fill/>
-                            <b-icon-star-fill/>
-                        </h4>
+                        <h5 align="center">Я профессиональная балерина.</h5>
+                        <div align="center">Работала и работаю в ведущих театрах Санкт-Петербурга:</div>
+                        <div align="center">Мариинский театр, театр имени Л. Якобсона</div>
+                        <div align="center">театр имени Л. Якобсона</div>
+                        <div align="center">Санкт-Петербургский Фестиваль балета.</div>
+                        <div align="center">Давала мастер-классы по балету + развитию данных в Испании.</div>
+                        <div align="center">За 3 недели мы подготовили и показали гала-концерт.</div>
                     </b-col>
                 </b-row>
             </b-container>
