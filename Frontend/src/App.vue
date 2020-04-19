@@ -1,5 +1,5 @@
 <template>
-    <b-container fluid class="h-100" id="app">
+    <b-container fluid class="h-100" id="app" @click="menuHide">
         <div class="row">
             <div class="position-absolute h-100 w-100 avatar-md bg d-none d-md-block"></div>
             <div class="position-absolute h-100 w-100 avatar-sm bg d-sm-block d-md-none"></div>
@@ -10,9 +10,6 @@
                     <a href="https://www.facebook.com/"><img src="./assets/fb.svg" alt="Facebook"/></a>
                     <a href="https://vk.com/"><img src="./assets/vk.svg" alt="Vkontakte"/></a>
                 </div>
-            </div>
-            <div class="nav-sm d-sm-block d-md-none d-lg-none">
-                <b-icon-list class="nav-menu" @click="menuToggle"/>
             </div>
             <b-container>
                 <b-row align-v="start">
@@ -38,8 +35,17 @@
                     </b-col>
                 </b-row>
             </b-container>
-            <div class="menu h-100 w-75" v-if="menu.opened">
-                <b-icon-list class="nav-menu" @click="menuToggle"/>
+            <div class="menu-b h-100 w-75 bg-dark" v-if="menu.opened" @click="$event.stopPropagation()"></div>
+            <div class="menu h-100 w-75" v-if="menu.opened" @click="$event.stopPropagation()">
+                <div class="social w-100">
+                    <a href="https://www.instagram.com/"><img src="./assets/instagram.svg" alt="Instagram"/></a>
+                    <a href="https://www.facebook.com/"><img src="./assets/fb.svg" alt="Facebook"/></a>
+                    <a href="https://vk.com/"><img src="./assets/vk.svg" alt="Vkontakte"/></a>
+                </div>
+            </div>
+            <div class="nav-sm d-sm-block d-md-none d-lg-none">
+                <b-icon-list class="nav-menu-open" v-if="!menu.opened" @click="menuToggle($event)"/>
+                <b-icon-list class="nav-menu-close" v-if="menu.opened" @click="menuToggle($event)"/>
             </div>
         </div>
     </b-container>
@@ -69,8 +75,12 @@ export default {
         // NavBar
     },
     methods: {
-        menuToggle() {
+        menuToggle(event) {
+            event.stopPropagation();
             this.menu.opened = !this.menu.opened;
+        },
+        menuHide() {
+            this.menu.opened = false;
         }
     }
 }
@@ -106,31 +116,30 @@ export default {
         min-height: 800px;
     }
 
-    .nav img {
-        margin: 0 15px 15px 15px;
-    }
 
-    .nav .social {
-        height: 200px;
-        bottom: 0;
-        position: absolute;
-    }
     .nav-sm {
         position: absolute;
         width: 60px;
         height: 60px;
     }
 
-    .menu {
+    .menu-b {
         position: absolute;
-        background-color: grey;
-        opacity: 50%;
+        opacity: 0.7;
     }
 
-    .nav-menu {
+    .menu {
+        position: absolute;
+        padding-top: 50px;
+    }
+
+    .nav-menu-open, .nav-menu-close {
         width: 40px;
         height: 40px;
         margin: 10px;
+    }
+
+    .nav-menu-close {
     }
 
     .avatar-md {
@@ -146,6 +155,28 @@ export default {
         background-repeat: no-repeat;
         background-size: 400px 400px;
         min-height: 850px;
+    }
+
+    .nav .social {
+        height: 200px;
+        bottom: 0;
+        position: absolute;
+    }
+
+    .menu .social {
+        height: 70px;
+        bottom: 0;
+        position: absolute;
+    }
+
+    .menu img {
+        width: 40px;
+        height: 40px;
+        margin: 15px 0 0 15px;
+    }
+
+    .nav img {
+        margin: 0 15px 15px 15px;
     }
 
     .links {
