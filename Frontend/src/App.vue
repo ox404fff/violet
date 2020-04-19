@@ -152,16 +152,15 @@ export default {
     }
     .menu .menu-items {
         margin: 10px 0;
-        border-bottom: 1px solid #6c757d;
+        border-bottom: 1px solid #b4a18a;
     }
 
     .menu .menu-items div {
         padding: 15px;
         text-align: center;
         font-size: xx-large;
-        color: #6c757d;
         border-style: solid;
-        border-color: #6c757d;
+        border-color: #b4a18a;
         border-width: 1px 0 0;
     }
 
