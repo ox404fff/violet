@@ -17,6 +17,9 @@
                         <div class="menu-items">
                             <span>Ballet</span>
                             <span>About</span>
+                            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GHLNUKH7TEJMQ&source=url">
+                                Donate
+                            </a>
                             <span class="e-mail">julia@violet.run</span>
                         </div>
                     </b-col>
@@ -40,6 +43,11 @@
                 <div class="menu-items">
                     <div>Ballet</div>
                     <div>About</div>
+                    <div>
+                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GHLNUKH7TEJMQ&source=url">
+                            Donate
+                        </a>
+                    </div>
                 </div>
                 <div class="social w-100">
                     <a href="https://instagram.com/juliya_kabatova"><img src="./assets/instagram.svg" alt="Instagram"/></a>
@@ -192,7 +200,7 @@ export default {
         text-align: center;
     }
 
-    .menu img {
+    .menu .social img {
         width: 40px;
         height: 40px;
         margin: 15px 0 0 15px;
@@ -202,11 +210,7 @@ export default {
         margin: 0 15px 15px 15px;
     }
 
-    .links {
-        text-decoration: underline;
-    }
-
-    .links span {
+    .links span, .links a {
         padding: 0 15px;
     }
 
