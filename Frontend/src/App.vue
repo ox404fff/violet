@@ -6,15 +6,15 @@
 
             <div class="nav h-100 d-none d-md-block">
                 <div class="social">
-                    <a href="https://www.instagram.com/"><img src="./assets/instagram.svg" alt="Instagram"/></a>
-                    <a href="https://www.facebook.com/"><img src="./assets/fb.svg" alt="Facebook"/></a>
-                    <a href="https://vk.com/"><img src="./assets/vk.svg" alt="Vkontakte"/></a>
+                    <a href="https://instagram.com/juliya_kabatova"><img src="./assets/instagram.svg" alt="Instagram"/></a>
+                    <a href="https://www.facebook.com/ykabatova"><img src="./assets/fb.svg" alt="Facebook"/></a>
+                    <a href="https://vk.com/juliyakabatova"><img src="./assets/vk.svg" alt="Vkontakte"/></a>
                 </div>
             </div>
             <b-container>
-                <b-row align-v="start">
+                <b-row align-v="start" class="d-none d-md-block">
                     <b-col cols="12" class="links" align="right">
-                        <div style="padding: 10px">
+                        <div class="menu-items">
                             <span>Ballet</span>
                             <span>About</span>
                             <span class="e-mail">julia@violet.run</span>
@@ -37,15 +37,20 @@
             </b-container>
             <div class="menu-b h-100 w-75 bg-dark" v-if="menu.opened" @click="$event.stopPropagation()"></div>
             <div class="menu h-100 w-75" v-if="menu.opened" @click="$event.stopPropagation()">
+                <div class="menu-items">
+                    <div>Ballet</div>
+                    <div>About</div>
+                </div>
                 <div class="social w-100">
-                    <a href="https://www.instagram.com/"><img src="./assets/instagram.svg" alt="Instagram"/></a>
-                    <a href="https://www.facebook.com/"><img src="./assets/fb.svg" alt="Facebook"/></a>
-                    <a href="https://vk.com/"><img src="./assets/vk.svg" alt="Vkontakte"/></a>
+                    <a href="https://instagram.com/juliya_kabatova"><img src="./assets/instagram.svg" alt="Instagram"/></a>
+                    <a href="https://www.facebook.com/ykabatova"><img src="./assets/fb.svg" alt="Facebook"/></a>
+                    <a href="https://vk.com/juliyakabatova"><img src="./assets/vk.svg" alt="Vkontakte"/></a>
+                    <div class="e-mail">julia@violet.run</div>
                 </div>
             </div>
             <div class="nav-sm d-sm-block d-md-none d-lg-none">
                 <b-icon-list class="nav-menu-open" v-if="!menu.opened" @click="menuToggle($event)"/>
-                <b-icon-list class="nav-menu-close" v-if="menu.opened" @click="menuToggle($event)"/>
+                <b-icon-x class="nav-menu-close" v-if="menu.opened" @click="menuToggle($event)"/>
             </div>
         </div>
     </b-container>
@@ -125,7 +130,7 @@ export default {
 
     .menu-b {
         position: absolute;
-        opacity: 0.7;
+        opacity: 0.9;
     }
 
     .menu {
@@ -140,6 +145,24 @@ export default {
     }
 
     .nav-menu-close {
+    }
+
+    .menu-items {
+        margin: 10px;
+    }
+    .menu .menu-items {
+        margin: 10px 0;
+        border-bottom: 1px solid #6c757d;
+    }
+
+    .menu .menu-items div {
+        padding: 15px;
+        text-align: center;
+        font-size: xx-large;
+        color: #6c757d;
+        border-style: solid;
+        border-color: #6c757d;
+        border-width: 1px 0 0;
     }
 
     .avatar-md {
@@ -164,9 +187,10 @@ export default {
     }
 
     .menu .social {
-        height: 70px;
+        height: 100px;
         bottom: 0;
         position: absolute;
+        text-align: center;
     }
 
     .menu img {
@@ -189,5 +213,10 @@ export default {
 
     .e-mail {
         color: #e9d842;
+    }
+
+    .menu .e-mail {
+        padding-top: 10px;
+        color: white;
     }
 </style>
