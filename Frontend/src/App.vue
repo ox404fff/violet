@@ -1,8 +1,8 @@
 <template>
     <b-container fluid class="h-100" id="app" @click="menuHide">
         <div class="row">
-            <div class="position-absolute h-100 w-100 avatar-md bg d-none d-md-block"></div>
-            <div class="position-absolute h-100 w-100 avatar-sm bg d-sm-block d-md-none"></div>
+            <div class="position-absolute h-100 w-100 avatar-md bg d-none d-lg-block"></div>
+            <div class="position-absolute h-100 w-100 avatar-sm bg d-sm-block d-md-block d-lg-none"></div>
 
             <div class="nav h-100 d-none d-md-block">
                 <div class="social">
@@ -15,12 +15,12 @@
                 <b-row align-v="start" class="d-none d-md-block">
                     <b-col cols="12" class="links" align="right">
                         <div class="menu-items">
-                            <span>Ballet</span>
-                            <span>About</span>
-                            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GHLNUKH7TEJMQ&source=url">
-                                Donate
-                            </a>
-                            <span class="e-mail">julia@violet.run</span>
+<!--                            <span>Ballet</span>-->
+<!--                            <span>About</span>-->
+<!--                            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GHLNUKH7TEJMQ&source=url">-->
+<!--                                Donate-->
+<!--                            </a>-->
+                            <span class="e-mail">ykabatova@yandex.ru</span>
                         </div>
                     </b-col>
                 </b-row>
@@ -28,32 +28,52 @@
                     <b-col class="col-md-1 d-none d-md-block" style="background-color: red"/>
                     <b-col class="col-md-7">
                         <h1 align="center">Кабатова Юлия</h1>
-                        <h5 align="center">Я профессиональная балерина.</h5>
-                        <div align="center">Работала и работаю в ведущих театрах Санкт-Петербурга:</div>
-                        <div align="center">Мариинский театр, театр имени Л. Якобсона</div>
-                        <div align="center">театр имени Л. Якобсона</div>
-                        <div align="center">Санкт-Петербургский Фестиваль балета.</div>
-                        <div align="center">Давала мастер-классы по балету + развитию данных в Испании.</div>
-                        <div align="center">За 3 недели мы подготовили и показали гала-концерт.</div>
+                        <h5 align="center">Хореограф, педагог</h5>
+                        <div class="about">
+                            <p>
+                                Я занимаюсь балетом с 6-ти лет. Была задействована практически во всех спектаклях
+                                театров: Мариинского, Якобсона.
+                                Помогала тем, кто только пришёл в театр, видела что не так, делала замечания и поняла,
+                                что пора становиться педагогом.
+                            </p>
+                            <p>
+                                Знаю секреты красивой осанки и здоровой спины!
+                            </p>
+                        </div>
+                        <div class="d-none d-md-block about">
+                            <h5 class="text-center">Групповые и индивидуальные занятия:</h5>
+                            <ul>
+                                <li>Боди-балет</li>
+                                <li>Стретчинг</li>
+                                <li>Балет для детей</li>
+                                <li>Консультации по питанию</li>
+                            </ul>
+                        </div>
                     </b-col>
                 </b-row>
             </b-container>
             <div class="menu-b h-100 w-75 bg-dark" v-if="menu.opened" @click="$event.stopPropagation()"></div>
             <div class="menu h-100 w-75" v-if="menu.opened" @click="$event.stopPropagation()">
                 <div class="menu-items">
-                    <div>Ballet</div>
-                    <div>About</div>
-                    <div>
-                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GHLNUKH7TEJMQ&source=url">
-                            Donate
-                        </a>
-                    </div>
+                    <div>Групповые и индивидуальные занятия</div>
                 </div>
+                <h4 class="text-center">Боди-балет</h4>
+                <h4 class="text-center">Стретчинг</h4>
+                <h4 class="text-center">Балет для детей</h4>
+                <h4 class="text-center">Консультации по питанию</h4>
+                <!--                    <div>Ballet</div>-->
+<!--                    <div>About</div>-->
+<!--                    <div>-->
+<!--                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GHLNUKH7TEJMQ&source=url">-->
+<!--                            Donate-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                </div>-->
                 <div class="social w-100">
                     <a href="https://instagram.com/juliya_kabatova"><img src="./assets/instagram.svg" alt="Instagram"/></a>
                     <a href="https://www.facebook.com/ykabatova"><img src="./assets/fb.svg" alt="Facebook"/></a>
                     <a href="https://vk.com/juliyakabatova"><img src="./assets/vk.svg" alt="Vkontakte"/></a>
-                    <div class="e-mail">julia@violet.run</div>
+                    <div class="e-mail">ykabatova@yandex.ru</div>
                 </div>
             </div>
             <div class="nav-sm d-sm-block d-md-none d-lg-none">
@@ -129,6 +149,10 @@ export default {
         min-height: 800px;
     }
 
+    .about {
+        text-align: justify;
+        padding: 50px 20px 0 20px;
+    }
 
     .nav-sm {
         position: absolute;
@@ -166,7 +190,7 @@ export default {
     .menu .menu-items div {
         padding: 15px;
         text-align: center;
-        font-size: xx-large;
+        font-size: x-large;
         border-style: solid;
         border-color: #b4a18a;
         border-width: 1px 0 0;
