@@ -74,7 +74,7 @@
      */
     .avatar-wt-md, .avatar-wt-sm {
         background-color: lightgrey;
-        min-height: 850px;
+        min-height: 700px;
         left: 0;
     }
 
@@ -114,7 +114,7 @@
         position: absolute;
         width: 80px;
         background-color: #242424;
-        min-height: 850px;
+        min-height: 700px;
     }
 
     .nav-sm {

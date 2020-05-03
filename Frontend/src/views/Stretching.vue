@@ -38,7 +38,7 @@ export default {
 
     #stretching-wrapper .avatar-md, #stretching-wrapper .avatar-sm {
         background-color: #000000;
-        min-height: 850px;
+        min-height: 700px;
         left: 0;
     }
     #stretching-wrapper .avatar-md {

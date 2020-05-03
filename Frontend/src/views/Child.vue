@@ -31,7 +31,7 @@
         color: #151515;
     }
 
-    .content {
+    #child-wrapper .content {
         height: 500px;
     }
 

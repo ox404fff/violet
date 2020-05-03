@@ -2,7 +2,7 @@
     <b-container id="ballet-wrapper">
         <div class="position-absolute h-100 w-100 avatar-wt-md bg d-none d-lg-block"></div>
         <div class="position-absolute h-100 w-100 avatar-wt-sm bg d-sm-block d-md-block d-lg-none"></div>
-        <b-row class="content" align-v="center">
+        <b-row class="content">
             <b-col class="col-md-1 d-none d-md-block"/>
             <b-col class="col-md-7">
                 <h1 align="center">Боди - балет.</h1>
@@ -33,7 +33,8 @@ export default {
         color: #151515;
     }
 
-    .content {
+    #ballet-wrapper .content {
+        margin-top: 100px;
         height: 500px;
     }
 

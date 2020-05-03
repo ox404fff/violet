@@ -2,7 +2,7 @@
     <b-container id="index-wrapper">
         <div class="position-absolute h-100 w-100 avatar-wt-md bg d-none d-lg-block"></div>
         <div class="position-absolute h-100 w-100 avatar-wt-sm bg d-sm-block d-md-block d-lg-none"></div>
-        <b-row class="content" align-v="center">
+        <b-row class="content">
             <b-col class="col-md-1 d-none d-md-block"/>
             <b-col class="col-md-7">
                 <h1 align="center">Кабатова Юлия</h1>
@@ -31,7 +31,8 @@
         color: #151515;
     }
 
-    .content {
+    #index-wrapper .content {
+        margin-top: 150px;
         height: 500px;
     }
 
