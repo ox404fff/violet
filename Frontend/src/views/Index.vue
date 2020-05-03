@@ -28,7 +28,7 @@
 
 <style>
     #index-wrapper {
-        color: #422827;
+        color: #151515;
     }
 
     .content {

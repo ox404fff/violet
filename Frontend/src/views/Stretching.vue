@@ -35,6 +35,25 @@ export default {
     #stretching-wrapper h1 {
         color: #b4a18a;
     }
+
+    #stretching-wrapper .avatar-md, #stretching-wrapper .avatar-sm {
+        background-color: #000000;
+        min-height: 850px;
+        left: 0;
+    }
+    #stretching-wrapper .avatar-md {
+        background-position: right bottom;
+        background-image: url("../assets/avatar.jpg");
+        background-repeat: no-repeat;
+    }
+
+    #stretching-wrapper .avatar-sm {
+        background-position: right bottom;
+        background-image: url("../assets/avatar-retina.jpg");
+        background-repeat: no-repeat;
+        background-size: 400px 400px;
+    }
+
     .content {
         height: 500px;
     }
