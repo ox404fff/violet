@@ -35,23 +35,4 @@
         height: 500px;
     }
 
-    .avatar-wt-md, .avatar-wt-sm {
-        background-color: #a2a2a2;
-        min-height: 850px;
-        left: 0;
-    }
-
-    .avatar-wt-md {
-        background-position: right bottom;
-        background-image: url("../assets/avatar-white.jpg");
-        background-repeat: no-repeat;
-    }
-
-    .avatar-wt-sm {
-        background-position: right bottom;
-        background-image: url("../assets/avatar-retina-white.jpg");
-        background-repeat: no-repeat;
-        background-size: 401px 294px;
-    }
-
 </style>

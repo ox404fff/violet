@@ -69,6 +69,49 @@
 </script>
 
 <style>
+    /**
+     * Backgrounds
+     */
+    .avatar-wt-md, .avatar-wt-sm {
+        background-color: #d1c6b0;
+        min-height: 850px;
+        left: 0;
+    }
+
+    .avatar-wt-md {
+        background-position: right bottom;
+        background-image: url("./assets/avatar-white.jpg");
+        background-repeat: no-repeat;
+    }
+
+    .avatar-wt-sm {
+        background-position: right bottom;
+        background-image: url("./assets/avatar-retina-white.jpg");
+        background-repeat: no-repeat;
+        background-size: 401px 294px;
+    }
+
+    .avatar-md, .avatar-sm {
+        background-color: #000000;
+        min-height: 850px;
+        left: 0;
+    }
+    .avatar-md {
+        background-position: right bottom;
+        background-image: url("./assets/avatar.jpg");
+        background-repeat: no-repeat;
+    }
+
+    .avatar-sm {
+        background-position: right bottom;
+        background-image: url("./assets/avatar-retina.jpg");
+        background-repeat: no-repeat;
+        background-size: 400px 400px;
+    }
+
+    /**
+     * Styles
+     */
     #app {
         min-width: 400px;
     }
@@ -114,7 +157,7 @@
     }
 
     .nav-menu-open {
-        color: #bd133a;
+        color: #422827;
     }
 
     .nav-menu-close {

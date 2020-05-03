@@ -32,26 +32,11 @@ export default {
     #stretching-wrapper {
         color: #b4a18a;
     }
-
+    #stretching-wrapper h1 {
+        color: #bd133a;
+    }
     .content {
         height: 500px;
-    }
-    .avatar-md, .avatar-sm {
-        background-color: #000000;
-        min-height: 850px;
-        left: 0;
-    }
-    .avatar-md {
-        background-position: right bottom;
-        background-image: url("../assets/avatar.jpg");
-        background-repeat: no-repeat;
-    }
-
-    .avatar-sm {
-        background-position: right bottom;
-        background-image: url("../assets/avatar-retina.jpg");
-        background-repeat: no-repeat;
-        background-size: 400px 400px;
     }
 
 </style>
