@@ -7,10 +7,10 @@
             <div class="nav h-100 d-none d-md-block">
                 <div class="big-menu">
                     <div class="menu-items">
-                        <router-link :to="{ name: 'index' }"><img src="./assets/food.svg" alt="Главная"/></router-link>
-                        <router-link :to="{ name: 'ballet' }"><img src="./assets/ballet.svg" alt="Боди-балет"/></router-link>
-                        <router-link :to="{ name: 'stretching' }"><img src="./assets/dancer.svg" alt="Стретчинг"/></router-link>
-                        <router-link :to="{ name: 'child' }"><img src="./assets/child.svg" alt="Балет для детей"/></router-link>
+                        <router-link :to="{ name: 'index' }"><div><img src="./assets/food.svg" alt="Главная"/></div></router-link>
+                        <router-link :to="{ name: 'ballet' }"><div><img src="./assets/ballet.svg" alt="Боди-балет"/></div></router-link>
+                        <router-link :to="{ name: 'stretching' }"><div><img src="./assets/dancer.svg" alt="Стретчинг"/></div></router-link>
+                        <router-link :to="{ name: 'child' }"><div><img src="./assets/child.svg" alt="Балет для детей"/></div></router-link>
                     </div>
                 </div>
                 <div class="social">
@@ -128,6 +128,14 @@
     .menu .menu-items {
         margin: 10px 0;
         border-bottom: 1px solid #b4a18a;
+    }
+
+    .nav .menu-items img{
+        margin: 15px;
+    }
+
+    .nav a.router-link-exact-active div {
+        background-color: #bd133a;
     }
 
     .menu .menu-items a {

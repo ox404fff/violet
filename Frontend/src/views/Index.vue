@@ -49,6 +49,7 @@
         background-repeat: no-repeat;
         min-height: 800px;
         left: 0;
+        bottom: 0;
     }
 
     .avatar-wt-sm {
