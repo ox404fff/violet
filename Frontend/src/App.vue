@@ -22,7 +22,7 @@
 
             <div class="menu-b h-100 w-75 bg-dark" v-if="menu.opened" @click="$event.stopPropagation()"></div>
             <div class="menu h-100 w-75" v-if="menu.opened" @click="$event.stopPropagation()">
-                <div class="menu-items">
+                <div class="menu-items" @click="menuHide">
                     <router-link :to="{ name: 'index' }">Главная</router-link>
                     <router-link :to="{ name: 'ballet' }">Боди-балет</router-link>
                     <router-link :to="{ name: 'stretching' }">Стретчинг</router-link>
@@ -55,7 +55,6 @@
             }
         },
         components: {
-            // NavBar
         },
         methods: {
             menuToggle(event) {
@@ -79,12 +78,10 @@
     }
 
     body {
-        background-color: #000000;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         font-size: 1rem;
         font-weight: 400;
         line-height: 1.5;
-        color: #b4a18a;
         text-align: left;
     }
 
@@ -107,16 +104,21 @@
 
     .menu {
         position: absolute;
-        padding-top: 50px;
+        padding-top: 70px;
     }
 
     .nav-menu-open, .nav-menu-close {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
         margin: 10px;
     }
 
+    .nav-menu-open {
+        color: #bd133a;
+    }
+
     .nav-menu-close {
+        color: #b4a18a;
     }
 
     .menu .menu-items {

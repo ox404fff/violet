@@ -1,11 +1,14 @@
 <template>
-    <b-container>
+    <b-container id="stretching-wrapper">
         <div class="position-absolute h-100 w-100 avatar-md bg d-none d-lg-block"></div>
         <div class="position-absolute h-100 w-100 avatar-sm bg d-sm-block d-md-block d-lg-none"></div>
         <b-row class="content" align-v="center">
             <b-col class="col-md-1 d-none d-md-block"/>
             <b-col class="col-md-7">
                 <h1 align="center">Stretching</h1>
+                <p>
+                    Это балет, адаптированный для любителей балета. Да теперь балет доступен для всех. Вы можете, благодаря этим занятиям обрести красивую осанку, стройные ноги и уверенность в себе. Боди балет - это Новый вид фитнеса. Прорабатываются мышцы всего тела!
+                </p>
             </b-col>
         </b-row>
     </b-container>
@@ -26,24 +29,16 @@ export default {
 </script>
 
 <style>
-    html, body {
-        height: 100%;
-    }
-
-    body {
-        background-color: #000000;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5;
+    #stretching-wrapper {
         color: #b4a18a;
-        text-align: left;
     }
 
     .content {
         height: 500px;
     }
-
+    .avatar-md, .avatar-sm {
+        background-color: #000000;
+    }
     .avatar-md {
         background-position: right bottom;
         background-image: url("../assets/avatar.jpg");
