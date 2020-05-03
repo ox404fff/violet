@@ -1,74 +1,33 @@
 <template>
     <b-container fluid class="h-100" id="app" @click="menuHide">
         <div class="row">
-            <div class="position-absolute h-100 w-100 avatar-md bg d-none d-lg-block"></div>
-            <div class="position-absolute h-100 w-100 avatar-sm bg d-sm-block d-md-block d-lg-none"></div>
+
+            <router-view></router-view>
 
             <div class="nav h-100 d-none d-md-block">
+                <div class="big-menu">
+                    <div class="menu-items">
+                        <router-link :to="{ name: 'index' }"><img src="./assets/food.svg" alt="Главная"/></router-link>
+                        <router-link :to="{ name: 'ballet' }"><img src="./assets/ballet.svg" alt="Боди-балет"/></router-link>
+                        <router-link :to="{ name: 'stretching' }"><img src="./assets/dancer.svg" alt="Стретчинг"/></router-link>
+                        <router-link :to="{ name: 'child' }"><img src="./assets/child.svg" alt="Балет для детей"/></router-link>
+                    </div>
+                </div>
                 <div class="social">
                     <a href="https://instagram.com/juliya_kabatova"><img src="./assets/instagram.svg" alt="Instagram"/></a>
                     <a href="https://www.facebook.com/ykabatova"><img src="./assets/fb.svg" alt="Facebook"/></a>
                     <a href="https://vk.com/juliyakabatova"><img src="./assets/vk.svg" alt="Vkontakte"/></a>
                 </div>
             </div>
-            <b-container>
-                <b-row align-v="start" class="d-none d-md-block">
-                    <b-col cols="12" class="links" align="right">
-                        <div class="menu-items">
-<!--                            <span>Ballet</span>-->
-<!--                            <span>About</span>-->
-<!--                            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GHLNUKH7TEJMQ&source=url">-->
-<!--                                Donate-->
-<!--                            </a>-->
-                            <span class="e-mail">ykabatova@yandex.ru</span>
-                        </div>
-                    </b-col>
-                </b-row>
-                <b-row class="center" align-v="center">
-                    <b-col class="col-md-1 d-none d-md-block" style="background-color: red"/>
-                    <b-col class="col-md-7">
-                        <h1 align="center">Кабатова Юлия</h1>
-                        <h5 align="center">Хореограф, педагог</h5>
-                        <div class="about">
-                            <p>
-                                Я занимаюсь балетом с 6-ти лет. Была задействована практически во всех спектаклях
-                                театров: Мариинского, Якобсона.
-                                Помогала тем, кто только пришёл в театр, видела что не так, делала замечания и поняла,
-                                что пора становиться педагогом.
-                            </p>
-                            <p>
-                                Знаю секреты красивой осанки и здоровой спины!
-                            </p>
-                        </div>
-                        <div class="d-none d-md-block about">
-                            <h5 class="text-center">Групповые и индивидуальные занятия:</h5>
-                            <ul>
-                                <li>Боди-балет</li>
-                                <li>Стретчинг</li>
-                                <li>Балет для детей</li>
-                                <li>Консультации по питанию</li>
-                            </ul>
-                        </div>
-                    </b-col>
-                </b-row>
-            </b-container>
+
             <div class="menu-b h-100 w-75 bg-dark" v-if="menu.opened" @click="$event.stopPropagation()"></div>
             <div class="menu h-100 w-75" v-if="menu.opened" @click="$event.stopPropagation()">
                 <div class="menu-items">
-                    <div>Групповые и индивидуальные занятия</div>
+                    <router-link :to="{ name: 'index' }">Главная</router-link>
+                    <router-link :to="{ name: 'ballet' }">Боди-балет</router-link>
+                    <router-link :to="{ name: 'stretching' }">Стретчинг</router-link>
+                    <router-link :to="{ name: 'child' }">Балет для детей</router-link>
                 </div>
-                <h4 class="text-center">Боди-балет</h4>
-                <h4 class="text-center">Стретчинг</h4>
-                <h4 class="text-center">Балет для детей</h4>
-                <h4 class="text-center">Консультации по питанию</h4>
-                <!--                    <div>Ballet</div>-->
-<!--                    <div>About</div>-->
-<!--                    <div>-->
-<!--                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GHLNUKH7TEJMQ&source=url">-->
-<!--                            Donate-->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                </div>-->
                 <div class="social w-100">
                     <a href="https://instagram.com/juliya_kabatova"><img src="./assets/instagram.svg" alt="Instagram"/></a>
                     <a href="https://www.facebook.com/ykabatova"><img src="./assets/fb.svg" alt="Facebook"/></a>
@@ -82,41 +41,32 @@
             </div>
         </div>
     </b-container>
+
 </template>
 
 <script>
-import Vue from 'vue'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-
-// import NavBar from './components/NavBar.vue'
-
-Vue.use(BootstrapVue);
-Vue.use(IconsPlugin);
-
-export default {
-    name: 'App',
-    data() {
-        return {
-            menu: {
-                opened: false
+    export default {
+        name: 'app',
+        data() {
+            return {
+                menu: {
+                    opened: false
+                }
+            }
+        },
+        components: {
+            // NavBar
+        },
+        methods: {
+            menuToggle(event) {
+                event.stopPropagation();
+                this.menu.opened = !this.menu.opened;
+            },
+            menuHide() {
+                this.menu.opened = false;
             }
         }
-    },
-    components: {
-        // NavBar
-    },
-    methods: {
-        menuToggle(event) {
-            event.stopPropagation();
-            this.menu.opened = !this.menu.opened;
-        },
-        menuHide() {
-            this.menu.opened = false;
-        }
     }
-}
 </script>
 
 <style>
@@ -138,20 +88,11 @@ export default {
         text-align: left;
     }
 
-    .center {
-        height: 500px;
-    }
-
     .nav {
         position: absolute;
         width: 80px;
         background-color: #242424;
         min-height: 800px;
-    }
-
-    .about {
-        text-align: justify;
-        padding: 50px 20px 0 20px;
     }
 
     .nav-sm {
@@ -162,7 +103,6 @@ export default {
 
     .menu-b {
         position: absolute;
-        opacity: 0.9;
     }
 
     .menu {
@@ -179,36 +119,30 @@ export default {
     .nav-menu-close {
     }
 
-    .menu-items {
+    .menu .menu-items {
         margin: 10px;
     }
+
     .menu .menu-items {
         margin: 10px 0;
         border-bottom: 1px solid #b4a18a;
     }
 
-    .menu .menu-items div {
+    .menu .menu-items a {
+        display: block;
         padding: 15px;
         text-align: center;
         font-size: x-large;
         border-style: solid;
         border-color: #b4a18a;
         border-width: 1px 0 0;
+        color: #b4a18a;
     }
 
-    .avatar-md {
-        background-position: right bottom;
-        background-image: url("./assets/avatar.jpg");
-        background-repeat: no-repeat;
-        min-height: 800px;
-    }
-
-    .avatar-sm {
-        background-position: right bottom;
-        background-image: url("./assets/avatar-retina.jpg");
-        background-repeat: no-repeat;
-        background-size: 400px 400px;
-        min-height: 850px;
+    .menu .menu-items a:hover, .menu .menu-items a.router-link-exact-active {
+        color: white;
+        background-color: #151515;
+        text-decoration: none;
     }
 
     .nav .social {
@@ -245,5 +179,9 @@ export default {
     .menu .e-mail {
         padding-top: 10px;
         color: white;
+    }
+
+    .big-menu {
+        padding-top: 15px;
     }
 </style>
