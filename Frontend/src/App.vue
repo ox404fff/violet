@@ -73,7 +73,7 @@
      * Backgrounds
      */
     .avatar-wt-md, .avatar-wt-sm {
-        background-color: #d1c6b0;
+        background-color: white;
         min-height: 850px;
         left: 0;
     }
@@ -88,7 +88,7 @@
         background-position: right bottom;
         background-image: url("./assets/avatar-retina-white.jpg");
         background-repeat: no-repeat;
-        background-size: 401px 294px;
+        background-size: 282px 401px;
     }
 
     .avatar-md, .avatar-sm {

@@ -33,7 +33,7 @@ export default {
         color: #b4a18a;
     }
     #stretching-wrapper h1 {
-        color: #bd133a;
+        color: #b4a18a;
     }
     .content {
         height: 500px;
