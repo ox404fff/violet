@@ -37,14 +37,14 @@
 
     .avatar-wt-md, .avatar-wt-sm {
         background-color: #a2a2a2;
+        min-height: 850px;
+        left: 0;
     }
 
     .avatar-wt-md {
         background-position: right bottom;
         background-image: url("../assets/avatar-white.jpg");
         background-repeat: no-repeat;
-        min-height: 800px;
-        left: 0;
     }
 
     .avatar-wt-sm {
@@ -52,9 +52,6 @@
         background-image: url("../assets/avatar-retina-white.jpg");
         background-repeat: no-repeat;
         background-size: 401px 294px;
-        min-height: 850px;
-        left: 0;
-        bottom: 0;
     }
 
 </style>

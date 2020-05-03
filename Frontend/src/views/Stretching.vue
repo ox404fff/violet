@@ -38,13 +38,13 @@ export default {
     }
     .avatar-md, .avatar-sm {
         background-color: #000000;
+        min-height: 850px;
+        left: 0;
     }
     .avatar-md {
         background-position: right bottom;
         background-image: url("../assets/avatar.jpg");
         background-repeat: no-repeat;
-        min-height: 800px;
-        left: 0;
     }
 
     .avatar-sm {
@@ -52,9 +52,6 @@ export default {
         background-image: url("../assets/avatar-retina.jpg");
         background-repeat: no-repeat;
         background-size: 400px 400px;
-        min-height: 850px;
-        left: 0;
-        bottom: 0;
     }
 
 </style>

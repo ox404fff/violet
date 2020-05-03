@@ -89,7 +89,7 @@
         position: absolute;
         width: 80px;
         background-color: #242424;
-        min-height: 800px;
+        min-height: 850px;
     }
 
     .nav-sm {
