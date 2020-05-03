@@ -7,10 +7,10 @@
             <div class="nav h-100 d-none d-md-block">
                 <div class="big-menu">
                     <div class="menu-items">
-                        <router-link :to="{ name: 'index' }"><div><img src="./assets/food.svg" alt="Главная"/></div></router-link>
-                        <router-link :to="{ name: 'ballet' }"><div><img src="./assets/ballet.svg" alt="Боди-балет"/></div></router-link>
-                        <router-link :to="{ name: 'stretching' }"><div><img src="./assets/dancer.svg" alt="Стретчинг"/></div></router-link>
-                        <router-link :to="{ name: 'child' }"><div><img src="./assets/child.svg" alt="Балет для детей"/></div></router-link>
+                        <router-link :to="{ name: 'index' }"><div class="light"><img src="./assets/food.svg" alt="Главная"/></div></router-link>
+                        <router-link :to="{ name: 'ballet' }"><div class="light"><img src="./assets/ballet.svg" alt="Боди-балет"/></div></router-link>
+                        <router-link :to="{ name: 'stretching' }"><div class="dark"><img src="./assets/dancer.svg" alt="Стретчинг"/></div></router-link>
+                        <router-link :to="{ name: 'child' }"><div class="light"><img src="./assets/child.svg" alt="Балет для детей"/></div></router-link>
                     </div>
                 </div>
                 <div class="social">
@@ -159,8 +159,12 @@
         margin: 15px;
     }
 
-    .nav a.router-link-exact-active div {
-        background-color: #bd133a;
+    .nav a.router-link-exact-active div.light {
+        background-color: lightgrey;
+    }
+
+    .nav a.router-link-exact-active div.dark {
+        background-color: #000000;
     }
 
     .menu .menu-items a {
