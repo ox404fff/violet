@@ -1,11 +1,11 @@
 <template>
     <b-container id="child-wrapper">
-        <div class="position-absolute h-100 w-100 avatar-wt-md bg d-none d-lg-block"></div>
-        <div class="position-absolute h-100 w-100 avatar-wt-sm bg d-sm-block d-md-block d-lg-none"></div>
+        <div class="position-absolute h-100 w-100 bg d-none d-lg-block"></div>
+        <div class="position-absolute h-100 w-100 bg d-sm-block d-md-block d-lg-none"></div>
         <b-row class="content" align-v="center">
             <b-col class="col-md-1 d-none d-md-block"/>
             <b-col class="col-md-7">
-                <h1>Балет для детей</h1>
+                <h1 align="center">Балет для детей</h1>
                 <p>
                     <b>Балет для детей</b> - прекрасная возможность развить танцевальность, музыкальность, чувство ритма и творческие способности ребёнка.
                 </p>
